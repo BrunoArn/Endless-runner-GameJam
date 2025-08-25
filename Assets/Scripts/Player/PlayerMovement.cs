@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void ChangeDirection(InputAction.CallbackContext context)
     {
-        Debug.Log("entrei");
         if (direction == Vector2.up + Vector2.right)
         {
             direction = Vector2.up + Vector2.left;
