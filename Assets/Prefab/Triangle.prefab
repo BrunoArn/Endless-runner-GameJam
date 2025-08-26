@@ -226,7 +226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 8.42
-  threasholdLa: 0.8
+  thresholdWall: 0.8
+  thresholdSlope: 0.1
 --- !u!60 &3350936284681487458
 PolygonCollider2D:
   m_ObjectHideFlags: 0

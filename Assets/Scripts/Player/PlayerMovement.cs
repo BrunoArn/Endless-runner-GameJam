@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
-    [SerializeField] float threasholdLa = 0.1f;
+    [SerializeField] float thresholdWall = 0.1f;
+    [SerializeField] float thresholdSlope = 0.1f;
 
     private PlayerInput playerInput;
     private Rigidbody2D rb;
@@ -46,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         }
         rb.linearVelocity = moveDir * speed;
 
-        if (rb.linearVelocity.magnitude < 0.5f)
+        if (rb.linearVelocity.magnitude < thresholdSlope)
         {
             Death();
         }
@@ -56,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
     {
         ContactPoint2D contact = collision.GetContact(0);
 
-        if (Mathf.Abs(contact.normal.x) > threasholdLa)
+        if (Mathf.Abs(contact.normal.x) > thresholdWall)
         {
             Death();
             return;

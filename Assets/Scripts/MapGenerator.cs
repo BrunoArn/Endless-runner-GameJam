@@ -9,10 +9,12 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] TileBase tile;
     [SerializeField] float spawnDistance;
 
-    [SerializeField] int yLimitPositive, yLimitNegative;
+    [SerializeField] int yMax, yMin;
 
     private Tilemap myTileMap;
     private BoundsInt bounds;
+    private int lastGeneratedYFloor;
+    private int lastGeneratedYRoof;
 
     private int lastGeneratedX;
 
@@ -22,12 +24,10 @@ public class MapGenerator : MonoBehaviour
         myTileMap.CompressBounds();
 
         bounds = myTileMap.cellBounds;
-        
         lastGeneratedX = bounds.xMax;
-        Debug.Log(lastGeneratedX);
 
-        //StartCoroutine(SpawnTiles());
-
+        lastGeneratedYFloor = yMin;
+        lastGeneratedYRoof = yMax;
     }
 
     private void Update()
@@ -42,31 +42,36 @@ public class MapGenerator : MonoBehaviour
 
         while (lastGeneratedX <= targetTileX)
         {
-            Vector3Int tilePosFloor = new(lastGeneratedX, yLimitNegative + 1, 0);
-            Vector3Int tilePosRoof = new(lastGeneratedX, yLimitPositive - 1, 0);
-            myTileMap.SetTile(tilePosFloor, tile);
-            myTileMap.SetTile(new Vector3Int(lastGeneratedX, yLimitPositive), tile);
+            //floor
+            //generate base Floor
+            myTileMap.SetTile(new Vector3Int(lastGeneratedX, yMin), tile);
+            myTileMap.SetTile(new Vector3Int(lastGeneratedX, yMin - 1), tile); // generate below
 
-            myTileMap.SetTile(tilePosRoof, tile);
-            myTileMap.SetTile(new Vector3Int(lastGeneratedX, yLimitNegative), tile);
-            lastGeneratedX++;
-        }
-    }
-
-    private void GetTilesPosition()
-    {
-        for (int x = bounds.xMin; x < bounds.xMax; x++)
-        {
-            for (int y = bounds.yMin; y < bounds.yMax; y++)
+            //generate variation Y
+            int floorY = lastGeneratedYFloor + Random.Range(-1, 2); // -1, 0 or 1
+            floorY = Mathf.Clamp(floorY, yMin, -1); // avoids 0 and its minimun
+            for (int y = yMin; y < floorY; y++)
             {
-                Vector3Int Pos = new(x, y, 0);
-                TileBase tile = myTileMap.GetTile(Pos);
 
-                if (tile != null)
-                {
-                    Debug.Log($"Tile at [{Pos}] is [{tile.name}]");
-                }
+                myTileMap.SetTile(new Vector3Int(lastGeneratedX, y), tile);
             }
+            lastGeneratedYFloor = floorY;
+
+            //Roof
+            //generate base Roof
+            myTileMap.SetTile(new Vector3Int(lastGeneratedX, yMax), tile);
+            myTileMap.SetTile(new Vector3Int(lastGeneratedX, yMax + 1), tile); // generate above
+
+            int roofY = lastGeneratedYRoof + Random.Range(-1, 2); // -1, 0 or 1
+            floorY = Mathf.Clamp(roofY, 1, yMax); // avoids 0 and its minimun
+            for (int y = roofY; y < yMax; y++)
+            {
+
+                myTileMap.SetTile(new Vector3Int(lastGeneratedX, y), tile);
+            }
+            lastGeneratedYRoof = roofY;
+
+            lastGeneratedX++;
         }
     }
 }
