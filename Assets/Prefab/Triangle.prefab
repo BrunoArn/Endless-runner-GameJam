@@ -211,7 +211,7 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_MaskInteraction: 0
-  m_Autodestruct: 1
+  m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
 --- !u!60 &3350936284681487458
@@ -318,3 +318,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5c2063c83fd04c8d0330ce4bd8f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDeath
+  playerDeath: {fileID: 11400000, guid: 236b9cd5cbedbf24e8c4d3be06a1948e, type: 2}

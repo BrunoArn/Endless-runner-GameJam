@@ -19,5 +19,10 @@ public class PlayerDeath : MonoBehaviour
     private void Die()
     {
         playerDeath.Raise();
+        if (this.gameObject.TryGetComponent<PlayerMovement>(out var movement))
+        {
+            movement.ZeroMovement();
+            movement.enabled = false;
+        }
     }
 }

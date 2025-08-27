@@ -21,8 +21,9 @@ public class PlayerMovement : MonoBehaviour
 
         playerInput.Movement.ChangeDirection.performed += ctx => ChangeDirection();
     }
-    
-    private void Start() {
+
+    private void Start()
+    {
         transform.rotation = Quaternion.Euler(rotationUp);
     }
 
@@ -51,5 +52,10 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(rotationUp);
             changedDirection = false;
         }
+    }
+
+    public void ZeroMovement()
+    {
+        rb.linearVelocity = new(0, 0);
     }
 }
