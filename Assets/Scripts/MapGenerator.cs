@@ -5,15 +5,18 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(Tilemap))]
 public class MapGenerator : MonoBehaviour
 {
+    [Header("Tile generation")]
     [SerializeField] Transform player;
     [SerializeField] TileBase tile;
+    [Space]
     [SerializeField] float spawnDistance;
-
     [SerializeField] int yMax, yMin;
-    [SerializeField] GridInformation gridInfo;
+
+    [Header("Biscuit")]
+    [SerializeField] GameObject biscuitPrefab;
+
 
     private Tilemap myTileMap;
-
     private BoundsInt bounds;
     private int lastGeneratedYFloor;
     private int lastGeneratedYRoof;
@@ -34,7 +37,14 @@ public class MapGenerator : MonoBehaviour
 
     private void Update()
     {
+        CreateMap();
+    }
+
+    private void CreateMap()
+    {
         SpawnTiles();
+        SpawnBiscuit();
+        lastGeneratedX++;
     }
 
     private void SpawnTiles()
@@ -57,14 +67,6 @@ public class MapGenerator : MonoBehaviour
             {
                 Vector3Int cellPosition = new(lastGeneratedX, y, 0);
                 myTileMap.SetTile(cellPosition, tile);
-                
-                /*
-                if (floorY > lastGeneratedYFloor)
-                {
-                    gridInfo.SetPositionProperty(cellPosition, "deadly", 1);
-                    myTileMap.SetColliderType(cellPosition, Tile.ColliderType.Sprite);
-                }
-                */
             }
             lastGeneratedYFloor = floorY;
 
@@ -80,18 +82,13 @@ public class MapGenerator : MonoBehaviour
             {
                 Vector3Int cellPosition = new(lastGeneratedX, y, 0);
                 myTileMap.SetTile(cellPosition, tile);
-
-                /*
-                if (roofY < lastGeneratedYRoof) // spikes
-                {
-                    gridInfo.SetPositionProperty(cellPosition, "deadly", 1);
-                    myTileMap.SetColliderType(cellPosition, Tile.ColliderType.Sprite);
-                }
-                */
             }
             lastGeneratedYRoof = roofY;
-
-            lastGeneratedX++;
         }
+    }
+
+    private void SpawnBiscuit()
+    {
+
     }
 }

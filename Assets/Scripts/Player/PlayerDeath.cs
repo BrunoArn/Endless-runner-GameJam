@@ -20,15 +20,14 @@ public class PlayerDeath : MonoBehaviour
         }
         //CheckDeath(collision);
     }
-
+    /*
     void OnCollisionStay2D(Collision2D collision)
     {
-        //CheckDeath(collision);
+        CheckDeath(collision);
     }
 
     private void CheckDeath(Collision2D collider)
     {
-        /*
         foreach (var contacts in collider.contacts)
         {
             var positionInside = contacts.point - contacts.normal * 0.01f;
@@ -40,8 +39,8 @@ public class PlayerDeath : MonoBehaviour
                 break;
             }
         }
-        */
     }
+    */
 
     private void Die()
     {
