@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
-    [SerializeField] float thresholdWall = 0.1f;
-    [SerializeField] float thresholdSlope = 0.1f;
 
     private PlayerInput playerInput;
     private Rigidbody2D rb;
@@ -18,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private bool grounded = false;
     private Vector2 lastContactNormal;
 
+
     //Debug features
-    private Vector3 initialPosition;
 
     private void Awake()
     {
@@ -27,10 +25,6 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         playerInput.Movement.ChangeDirection.performed += ctx => ChangeDirection();
-
-
-        //debug carai
-        initialPosition = this.transform.position;
     }
 
     void OnEnable() => playerInput.Enable();
@@ -45,25 +39,13 @@ public class PlayerMovement : MonoBehaviour
             Vector2 surfaceTangent = new(-lastContactNormal.y, lastContactNormal.x);
             moveDir = Vector2.Dot(moveDir, surfaceTangent) * surfaceTangent;
         }
+
+
+
         rb.linearVelocity = moveDir * speed;
-
-        if (rb.linearVelocity.magnitude < thresholdSlope)
-        {
-            Death();
-        }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        ContactPoint2D contact = collision.GetContact(0);
-
-        if (Mathf.Abs(contact.normal.x) > thresholdWall)
-        {
-            Death();
-            return;
-        }
-    }
-
+/*
     void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -72,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
             lastContactNormal = contact.normal;
             grounded = true;
         }
-
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -82,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
             grounded = false;
         }
     }
+    */
 
     private void ChangeDirection()
     {
@@ -96,10 +78,5 @@ public class PlayerMovement : MonoBehaviour
             direction = Vector2.up + Vector2.right;
             changedDirection = false;
         }
-    }
-
-    private void Death()
-    {
-        this.transform.position = initialPosition;
     }
 }

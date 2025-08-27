@@ -10,8 +10,10 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] float spawnDistance;
 
     [SerializeField] int yMax, yMin;
+    [SerializeField] GridInformation gridInfo;
 
     private Tilemap myTileMap;
+
     private BoundsInt bounds;
     private int lastGeneratedYFloor;
     private int lastGeneratedYRoof;
@@ -50,10 +52,19 @@ public class MapGenerator : MonoBehaviour
             //generate variation Y
             int floorY = lastGeneratedYFloor + Random.Range(-1, 2); // -1, 0 or 1
             floorY = Mathf.Clamp(floorY, yMin, -1); // avoids 0 and its minimun
+
             for (int y = yMin; y < floorY; y++)
             {
-
-                myTileMap.SetTile(new Vector3Int(lastGeneratedX, y), tile);
+                Vector3Int cellPosition = new(lastGeneratedX, y, 0);
+                myTileMap.SetTile(cellPosition, tile);
+                
+                /*
+                if (floorY > lastGeneratedYFloor)
+                {
+                    gridInfo.SetPositionProperty(cellPosition, "deadly", 1);
+                    myTileMap.SetColliderType(cellPosition, Tile.ColliderType.Sprite);
+                }
+                */
             }
             lastGeneratedYFloor = floorY;
 
@@ -63,11 +74,20 @@ public class MapGenerator : MonoBehaviour
             myTileMap.SetTile(new Vector3Int(lastGeneratedX, yMax + 1), tile); // generate above
 
             int roofY = lastGeneratedYRoof + Random.Range(-1, 2); // -1, 0 or 1
-            floorY = Mathf.Clamp(roofY, 1, yMax); // avoids 0 and its minimun
+            roofY = Mathf.Clamp(roofY, 1, yMax); // avoids 0 and its minimun
+
             for (int y = roofY; y < yMax; y++)
             {
+                Vector3Int cellPosition = new(lastGeneratedX, y, 0);
+                myTileMap.SetTile(cellPosition, tile);
 
-                myTileMap.SetTile(new Vector3Int(lastGeneratedX, y), tile);
+                /*
+                if (roofY < lastGeneratedYRoof) // spikes
+                {
+                    gridInfo.SetPositionProperty(cellPosition, "deadly", 1);
+                    myTileMap.SetColliderType(cellPosition, Tile.ColliderType.Sprite);
+                }
+                */
             }
             lastGeneratedYRoof = roofY;
 

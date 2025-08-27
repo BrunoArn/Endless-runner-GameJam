@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 134327500695664409}
   - component: {fileID: 9029664270844868647}
   - component: {fileID: 4637224497633076017}
-  - component: {fileID: 4956380446591602120}
-  m_Layer: 0
+  - component: {fileID: 8739750225820906647}
+  m_Layer: 3
   m_Name: Map
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -817,7 +817,7 @@ Tilemap:
       e00: 0
       e01: 0
       e02: 0
-      e03: 7.652865e-10
+      e03: 7.652723e-10
       e10: 0
       e11: 0
       e12: 0
@@ -1048,7 +1048,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4956380446591602120
+--- !u!114 &8739750225820906647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
