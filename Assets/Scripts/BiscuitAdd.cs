@@ -7,7 +7,9 @@ public class BiscuitAdd : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        scoreInfo.AddScore(scoreAmount);
+        if (scoreInfo != null)
+            scoreInfo.AddScore(scoreAmount);
+            
         Destroy(this.gameObject);
     }
 }

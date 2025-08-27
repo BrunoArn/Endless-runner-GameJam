@@ -1,21 +1,17 @@
-using System;
 using TMPro;
 using UnityEngine;
 
-[RequireComponent(typeof(TextMeshProUGUI))]
 public class Score : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
     [SerializeField] float scoreMultiplier;
-    private TextMeshProUGUI text;
+    [SerializeField] TextMeshProUGUI text;
 
     private Vector3 lastPosition;
     private float score = 0;
 
     void Start()
     {
-        text = GetComponent<TextMeshProUGUI>();
-        if (playerTransform == null) playerTransform = transform;
         lastPosition = playerTransform.position;
     }
 

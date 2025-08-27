@@ -12,8 +12,8 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] float spawnDistance;
     [SerializeField] int yMax, yMin;
 
-    [Header("Biscuit")]
-    [SerializeField] GameObject biscuitPrefab;
+    //[Header("Biscuit")]
+    //[SerializeField] GameObject biscuitPrefab;
 
 
     private Tilemap myTileMap;
@@ -43,7 +43,7 @@ public class MapGenerator : MonoBehaviour
     private void CreateMap()
     {
         SpawnTiles();
-        SpawnBiscuit();
+        //SpawnBiscuit();
         lastGeneratedX++;
     }
 
