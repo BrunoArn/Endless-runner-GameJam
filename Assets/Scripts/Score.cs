@@ -8,7 +8,10 @@ public class Score : MonoBehaviour
     [SerializeField] TextMeshProUGUI text;
 
     private Vector3 lastPosition;
-    private float score = 0;
+    private float distanceScore = 0f;
+    private float distanceTraveled = 0f;
+    private float cookieScore = 0f;
+    private int cookiesGathered = 0;
 
     void Start()
     {
@@ -18,14 +21,35 @@ public class Score : MonoBehaviour
     void Update()
     {
         float distanceMoved = Vector3.Distance(playerTransform.position, lastPosition);
-        score += distanceMoved * scoreMultiplier;
+        distanceTraveled += distanceMoved;
+        distanceScore += distanceMoved * scoreMultiplier;
         lastPosition = playerTransform.position;
 
-        text.text = Mathf.FloorToInt(score).ToString();
+        text.text = Mathf.FloorToInt(distanceScore + cookieScore).ToString();
     }
 
     public void AddScore(float amount)
     {
-        score += amount;
+        cookieScore += amount;
+        cookiesGathered++;
+    }
+
+    public float GetCookiesScore()
+    {
+        return cookieScore;
+    }
+
+    public int GetCookiesAmount()
+    {
+        return cookiesGathered;
+    }
+
+    public float GetDistanceScore()
+    {
+        return distanceScore;
+    }
+    public float GetDistanceMoved()
+    {
+        return distanceTraveled;
     }
 }

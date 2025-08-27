@@ -106,6 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BiscuitAdd
   scoreInfo: {fileID: 0}
   scoreAmount: 10
+  particle: {fileID: 1542240846036292420, guid: 438f57f1ecb794b438f8020b98345530, type: 3}
 --- !u!61 &-2208142885706544430
 BoxCollider2D:
   m_ObjectHideFlags: 0

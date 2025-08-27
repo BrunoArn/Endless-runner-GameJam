@@ -56,7 +56,7 @@ public class MapGenerator : MonoBehaviour
             //roof
             GenerateTiles(lastGeneratedX, yMax, 1, 1, yMax, ref lastGeneratedYRoof);
 
-            GenerateBiscuit(lastGeneratedX, lastGeneratedYFloor + 1);
+            GenerateBiscuit(lastGeneratedX, lastGeneratedYRoof, lastGeneratedYFloor);
             lastGeneratedX++;
         }
     }
@@ -81,15 +81,16 @@ public class MapGenerator : MonoBehaviour
         lastY = newY;
     }
 
-    private void GenerateBiscuit(int x, int y)
+    private void GenerateBiscuit(int x, int yMax, int yMin)
     {
         int chanceToSpawn = Random.Range(0, 100);
         if (chanceToSpawn >= 80)
         {
-            Vector3 worldPos = myTileMap.CellToWorld(new Vector3Int(x, y, 0)) + new Vector3(0.5f, 0.5f, 0);
+            int randomSpawnY = Random.Range(yMax - 1, yMin + 1);
+            Vector3 worldPos = myTileMap.CellToWorld(new Vector3Int(x, randomSpawnY, 0)) + new Vector3(0.5f, 0.5f, 0);
             GameObject biscuit = Instantiate(biscuitPrefab, worldPos, Quaternion.identity);
-            
-            if (biscuit.TryGetComponent<BiscuitAdd>(out BiscuitAdd biscuitScoreReference))
+
+            if (biscuit.TryGetComponent<BiscuitAdd>(out var biscuitScoreReference))
             {
                 biscuitScoreReference.scoreInfo = score;
             }

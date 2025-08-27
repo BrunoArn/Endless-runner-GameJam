@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
-    private Vector3 initialPosition;
+    
+    [SerializeField] GameEvent playerDeath;
 
     private void Start() {
-        initialPosition = transform.position;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -18,6 +18,6 @@ public class PlayerDeath : MonoBehaviour
 
     private void Die()
     {
-        transform.position = initialPosition;
+        playerDeath.Raise();
     }
 }

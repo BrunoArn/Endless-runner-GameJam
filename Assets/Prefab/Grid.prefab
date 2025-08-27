@@ -1065,6 +1065,8 @@ MonoBehaviour:
   spawnDistance: 15
   yMax: 4
   yMin: -5
+  biscuitPrefab: {fileID: 2312763168642375706, guid: 75aa295ab4f7bb84da24762832ff9673, type: 3}
+  score: {fileID: 0}
 --- !u!1 &5858649870415833593
 GameObject:
   m_ObjectHideFlags: 0
