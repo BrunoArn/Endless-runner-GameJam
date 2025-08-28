@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: Tile
   m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.RuleTile
-  m_DefaultSprite: {fileID: 1355284732, guid: 3b72c6301c99d4b47b712fc325ee63ab, type: 3}
+  m_DefaultSprite: {fileID: 1323475690, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 3
     m_Sprites:
-    - {fileID: 918485732, guid: 3b72c6301c99d4b47b712fc325ee63ab, type: 3}
+    - {fileID: -2105515749, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -37,7 +37,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 2
     m_Sprites:
-    - {fileID: -1326414142, guid: 3b72c6301c99d4b47b712fc325ee63ab, type: 3}
+    - {fileID: 1634154630, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -56,7 +56,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 8
     m_Sprites:
-    - {fileID: -1681323462, guid: 3b72c6301c99d4b47b712fc325ee63ab, type: 3}
+    - {fileID: 263678936, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -75,7 +75,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 9
     m_Sprites:
-    - {fileID: -1718483288, guid: 3b72c6301c99d4b47b712fc325ee63ab, type: 3}
+    - {fileID: -872186930, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 0
     m_Sprites:
-    - {fileID: 1903350609, guid: 3b72c6301c99d4b47b712fc325ee63ab, type: 3}
+    - {fileID: -126235237, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -110,7 +110,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 1
     m_Sprites:
-    - {fileID: -7056585652792655146, guid: 3b72c6301c99d4b47b712fc325ee63ab, type: 3}
+    - {fileID: -392991033338989280, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -126,7 +126,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 13
     m_Sprites:
-    - {fileID: 2357558486161059338, guid: 05449fd5b515d294fa3dd3883cbff83c, type: 3}
+    - {fileID: -167057378, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -145,7 +145,7 @@ MonoBehaviour:
     m_RuleTransform: 4
   - m_Id: 11
     m_Sprites:
-    - {fileID: 418754041, guid: 2d782a908f06fad4aa9454dc6fe73bc4, type: 3}
+    - {fileID: -83393184, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -164,7 +164,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 7
     m_Sprites:
-    - {fileID: -1667466861, guid: 3b72c6301c99d4b47b712fc325ee63ab, type: 3}
+    - {fileID: 1911906737, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -181,7 +181,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 4
     m_Sprites:
-    - {fileID: 1283363520, guid: 3b72c6301c99d4b47b712fc325ee63ab, type: 3}
+    - {fileID: -1290039873, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -198,7 +198,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 5
     m_Sprites:
-    - {fileID: -895430874, guid: 3b72c6301c99d4b47b712fc325ee63ab, type: 3}
+    - {fileID: -2104870453, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -215,7 +215,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 6
     m_Sprites:
-    - {fileID: 243182650, guid: 3b72c6301c99d4b47b712fc325ee63ab, type: 3}
+    - {fileID: -718173959, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -232,7 +232,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 10
     m_Sprites:
-    - {fileID: 3745532255326022406, guid: 2d782a908f06fad4aa9454dc6fe73bc4, type: 3}
+    - {fileID: -1449244380, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -253,7 +253,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 12
     m_Sprites:
-    - {fileID: -1547138376, guid: 05449fd5b515d294fa3dd3883cbff83c, type: 3}
+    - {fileID: 1801965797, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -270,5 +270,24 @@ MonoBehaviour:
     - {x: -1, y: -1, z: 0}
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
+    - {x: 1, y: 0, z: 0}
+    m_RuleTransform: 0
+  - m_Id: 14
+    m_Sprites:
+    - {fileID: 1323475690, guid: 78aff3a381cacb54e95d8ed2fd42d984, type: 3}
+    - {fileID: 5978701568217353469, guid: 40b106450ae57594cbcecfeeb5367c8f, type: 3}
+    - {fileID: -1582574963, guid: 40b106450ae57594cbcecfeeb5367c8f, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 5
+    m_Neighbors: 01000000010000000100000001000000
+    m_NeighborPositions:
+    - {x: -1, y: 0, z: 0}
+    - {x: 0, y: -1, z: 0}
+    - {x: 0, y: 1, z: 0}
     - {x: 1, y: 0, z: 0}
     m_RuleTransform: 0
