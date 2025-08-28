@@ -260,9 +260,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
+    - - {x: -0.0031225644, y: 0.4269368}
+      - {x: -0.3811794, y: -0.2278768}
+      - {x: 0.3631161, y: -0.18299736}
   m_UseDelaunayMesh: 0
 --- !u!50 &588466743719895807
 Rigidbody2D:
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db555ce3b7d67c74ab80c4edd15fc197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 8
+  speed: 9
   rotationUp: {x: 0, y: 0, z: 75}
   rotationDown: {x: 0, y: 0, z: -15}
 --- !u!114 &3608474939916702104

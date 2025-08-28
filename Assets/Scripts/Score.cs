@@ -7,6 +7,9 @@ public class Score : MonoBehaviour
     [SerializeField] float scoreMultiplier;
     [SerializeField] TextMeshProUGUI text;
 
+    [SerializeField] float distanceToMultipleScore = 100;
+    float distanceToMultiply = 0f;
+
     private Vector3 lastPosition;
     private float distanceScore = 0f;
     private float distanceTraveled = 0f;
@@ -20,8 +23,16 @@ public class Score : MonoBehaviour
 
     void Update()
     {
-        float distanceMoved = Vector3.Distance(playerTransform.position, lastPosition);
+        float distanceMoved = playerTransform.position.x - lastPosition.x;
         distanceTraveled += distanceMoved;
+
+        distanceToMultiply += distanceMoved;
+        if (distanceToMultiply >= distanceToMultipleScore && scoreMultiplier <= 0.5f)
+        {
+            distanceToMultiply -= distanceToMultipleScore;
+            scoreMultiplier += scoreMultiplier;
+        }
+
         distanceScore += distanceMoved * scoreMultiplier;
         lastPosition = playerTransform.position;
 

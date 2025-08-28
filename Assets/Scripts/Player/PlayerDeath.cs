@@ -5,7 +5,12 @@ public class PlayerDeath : MonoBehaviour
     
     [SerializeField] GameEvent playerDeath;
 
-    private void Start() {
+    void OnDisable()
+    {
+        if (this.gameObject.TryGetComponent<TrailRenderer>(out var trail))
+        {
+            trail.enabled = false;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
