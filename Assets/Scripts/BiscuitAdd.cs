@@ -11,6 +11,11 @@ public class BiscuitAdd : MonoBehaviour
         if (scoreInfo != null)
             scoreInfo.AddScore(scoreAmount);
 
+        if (collision.TryGetComponent<Animator>(out var playerAnimator))
+        {
+            playerAnimator.SetTrigger("Eating");
+        }
+
         Instantiate(particle, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }

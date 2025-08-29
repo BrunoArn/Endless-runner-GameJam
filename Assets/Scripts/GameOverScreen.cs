@@ -4,12 +4,18 @@ using UnityEngine;
 public class GameOverScreen : MonoBehaviour
 {
     [SerializeField] GameObject ui;
-    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI DistanceTraveled;
+    [SerializeField] TextMeshProUGUI DistanceScore;
+    [SerializeField] TextMeshProUGUI CookiesGathered;
+    [SerializeField] TextMeshProUGUI CookiesScore;
     [SerializeField] Score scoreInfo;
 
     public void ActivateGameOver()
     {
         this.ui.SetActive(true);
-        scoreText.text = $"Cookies Gathered [{scoreInfo.GetCookiesAmount()}] \t cookies Score [{scoreInfo.GetCookiesScore()}]\nDistance traveled [{scoreInfo.GetDistanceMoved()}] \t distance score[{(int)scoreInfo.GetDistanceScore()}]";
+        DistanceTraveled.text = $"Distance traveled\n\n[{(int)scoreInfo.GetDistanceMoved()}]";
+        DistanceScore.text = $"Distance score\n\n[{(int)scoreInfo.GetDistanceScore()}]";
+        CookiesGathered.text = $"Cookies Gathered\n\n[{scoreInfo.GetCookiesAmount()}]";
+        CookiesScore.text = $"Cookies Score\n\n[{scoreInfo.GetCookiesScore()}]";
     }
 }
