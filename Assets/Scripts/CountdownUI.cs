@@ -16,19 +16,32 @@ public class CountdownUI : MonoBehaviour
     [Header("Gameplay")]
     [SerializeField] PlayerMovement playerMovement;
 
+    [Header("Audios")]
+    [SerializeField] AudioClip firstAudio;
+    [SerializeField] AudioClip secondAudio;
+
+    private AudioSource audioSource;
+
+    private void Start() {
+        audioSource = GetComponent<AudioSource>();
+        StartCoroutine(CountdownRoutine());
+        
+    }
     void OnEnable()
     {
-        StartCoroutine(CountdownRoutine());
     }
 
     private IEnumerator CountdownRoutine()
     {
         playerMovement.enabled = false;
-
         for (int n = startNumber; n >= 0; n--)
         {
             countdownText.text = n.ToString();
             SetAlpha(1f);
+            if (n > 0)
+                audioSource.PlayOneShot(firstAudio);
+            else
+                audioSource.PlayOneShot(secondAudio);
             yield return new WaitForSecondsRealtime(holdTime);
 
             float time = 0f;

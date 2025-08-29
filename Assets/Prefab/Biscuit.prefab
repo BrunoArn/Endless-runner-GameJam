@@ -108,7 +108,7 @@ MonoBehaviour:
   scoreInfo: {fileID: 0}
   scoreAmount: 10
   particle: {fileID: 1542240846036292420, guid: 438f57f1ecb794b438f8020b98345530, type: 3}
-  audioClip: {fileID: 8300000, guid: 0a9ae0cef76742943a09b5e755de9880, type: 3}
+  audioClip: {fileID: 8300000, guid: 0fdb5e7cee6f18a468ad0bf466d9ed66, type: 3}
 --- !u!61 &-2208142885706544430
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 0a9ae0cef76742943a09b5e755de9880, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0fdb5e7cee6f18a468ad0bf466d9ed66, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

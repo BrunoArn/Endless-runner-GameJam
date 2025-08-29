@@ -4,6 +4,11 @@ public class PlayerDeath : MonoBehaviour
 {
     
     [SerializeField] GameEvent playerDeath;
+    private AudioSource audioSource;
+
+    private void Start() {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void OnDisable()
     {
@@ -24,6 +29,7 @@ public class PlayerDeath : MonoBehaviour
     private void Die()
     {
         playerDeath.Raise();
+        audioSource.Play();
         if (this.gameObject.TryGetComponent<PlayerMovement>(out var movement))
         {
             movement.ZeroMovement();
