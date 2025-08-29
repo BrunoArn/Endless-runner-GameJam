@@ -36,7 +36,10 @@ public class Score : MonoBehaviour
         distanceScore += distanceMoved * scoreMultiplier;
         lastPosition = playerTransform.position;
 
-        text.text = Mathf.FloorToInt(distanceScore + cookieScore).ToString();
+        if (text != null)
+        {
+            text.text = Mathf.FloorToInt(distanceScore + cookieScore).ToString();
+        }
     }
 
     public void AddScore(float amount)

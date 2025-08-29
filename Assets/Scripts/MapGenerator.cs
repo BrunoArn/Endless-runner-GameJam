@@ -73,7 +73,16 @@ public class MapGenerator : MonoBehaviour
         myTileMap.SetTile(new Vector3Int(x, baseY + extraBasePosition), tile); // generate below
 
         //wdifficulty wheights
-        float progress = Mathf.InverseLerp(0f, 500f, score.GetDistanceMoved());
+        float movedDistance;
+        if (score == null)
+        {
+            movedDistance = 500f;
+        }
+        else
+        {
+            movedDistance = score.GetDistanceMoved();
+        }
+        float progress = Mathf.InverseLerp(0f, 500f, movedDistance);
         float weightNeg, weightZero, weightPos;
         if (isFloor)
         {
