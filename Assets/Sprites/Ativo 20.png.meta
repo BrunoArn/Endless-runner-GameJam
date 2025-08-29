@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dee44369682739946ae9b9afd0706738
+guid: 9b7d7759d778f97429070afcd2d7b9c3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3525453149786773092
-    second: bg_1_0
+      213: 1293144201873174796
+    second: Ativo 20_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 72
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,45 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bg_1_0
+      name: Ativo 20_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2962
-        height: 1008
+        width: 76
+        height: 76
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 466925906fcece030800000000000000
-      internalID: 3525453149786773092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bg_1_1
-      rect:
-        serializedVersion: 2
-        x: 2962
-        y: 0
-        width: 2962
-        height: 1008
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfd1c00f46e27664193f25bd4328b1fe
-      internalID: -1496453118
+      spriteID: c01b10cdccb22f110800000000000000
+      internalID: 1293144201873174796
       vertices: []
       indices: 
       edges: []
@@ -160,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: adfa2206243ba0044a1658f18503b875
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -168,12 +146,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":2962.0,"y":1008.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      bg_1_0: 3525453149786773092
-      bg_1_1: -1496453118
+      Ativo 20_0: 1293144201873174796
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

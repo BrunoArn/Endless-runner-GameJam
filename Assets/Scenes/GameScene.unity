@@ -302,6 +302,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6868737859982366193, guid: 200930822268cbd4abd72ea1861bf7fa, type: 3}
+      propertyPath: m_Radius
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 7901240181586964531, guid: 200930822268cbd4abd72ea1861bf7fa, type: 3}
       propertyPath: m_Name
       value: Player
@@ -309,49 +313,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7901240181586964531, guid: 200930822268cbd4abd72ea1861bf7fa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 725034996}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 200930822268cbd4abd72ea1861bf7fa, type: 3}
 --- !u!114 &371337233 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5893804561247085973, guid: 200930822268cbd4abd72ea1861bf7fa, type: 3}
   m_PrefabInstance: {fileID: 332798208}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725034991}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db555ce3b7d67c74ab80c4edd15fc197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
---- !u!1 &725034991 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7901240181586964531, guid: 200930822268cbd4abd72ea1861bf7fa, type: 3}
-  m_PrefabInstance: {fileID: 332798208}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &725034996
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725034991}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 237e63efdbc97784098e89c228b0ae5c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &771957986
 PrefabInstance:
   m_ObjectHideFlags: 0
