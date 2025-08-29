@@ -6,6 +6,14 @@ public class BiscuitAdd : MonoBehaviour
     [SerializeField] float scoreAmount;
     [SerializeField] GameObject particle;
 
+    private AudioSource audioSource;
+    [SerializeField] AudioClip audioClip;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (scoreInfo != null)
@@ -16,7 +24,9 @@ public class BiscuitAdd : MonoBehaviour
             playerAnimator.SetTrigger("Eating");
         }
 
+        audioSource.PlayOneShot(audioClip);
         Instantiate(particle, transform.position, Quaternion.identity);
-        Destroy(this.gameObject);
+        this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        Destroy(this.gameObject, audioClip.length);
     }
 }
