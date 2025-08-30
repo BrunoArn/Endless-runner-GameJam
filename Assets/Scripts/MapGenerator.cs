@@ -16,6 +16,7 @@ public class MapGenerator : MonoBehaviour
     [Header("Biscuit")]
     [SerializeField] GameObject biscuitPrefab;
     [SerializeField] Score score;
+    [SerializeField] int biscuitGaps;
 
     //tilemap
     private Tilemap myTileMap;
@@ -27,6 +28,8 @@ public class MapGenerator : MonoBehaviour
     private int lastGeneratedYFloor;
     private int lastGeneratedYRoof;
     private int lastGeneratedX;
+
+    private int lastGeneratedXBiscuit;
 
     private void Awake()
     {
@@ -41,6 +44,7 @@ public class MapGenerator : MonoBehaviour
 
         bounds = myTileMap.cellBounds;
         lastGeneratedX = bounds.xMax;
+        lastGeneratedXBiscuit = lastGeneratedX;
         clearUpToX = bounds.xMin;
     }
 
@@ -133,13 +137,13 @@ public class MapGenerator : MonoBehaviour
     private void GenerateBiscuit(int x, int yMax, int yMin)
     {
         int chanceToSpawn = Random.Range(0, 100);
-        if (chanceToSpawn >= 95)
+        if (chanceToSpawn >= 90 && lastGeneratedX >= lastGeneratedXBiscuit + biscuitGaps)
         {
             int randomSpawnY = Random.Range(yMin + 1, yMax - 1);
             Vector3 worldPos = myTileMap.CellToWorld(new Vector3Int(x, randomSpawnY, 0)) + new Vector3(0.5f, 0.5f, 0);
             GameObject biscuit = Instantiate(biscuitPrefab, worldPos, Quaternion.identity);
             biscuits.Add(biscuit);
-
+            lastGeneratedXBiscuit = lastGeneratedX;
             if (biscuit.TryGetComponent<BiscuitAdd>(out var biscuitScoreReference))
             {
                 biscuitScoreReference.scoreInfo = score;
