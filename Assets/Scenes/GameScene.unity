@@ -1030,6 +1030,10 @@ PrefabInstance:
       propertyPath: m_Resource
       value: 
       objectReference: {fileID: 8300000, guid: 1a78b9dbe91337d4d8f2a01b5ab0903a, type: 3}
+    - target: {fileID: 5692826411439102495, guid: e67e956468ebce042b64cd8c01aebc2a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7173322761619159934, guid: e67e956468ebce042b64cd8c01aebc2a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.44879
@@ -1153,6 +1157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1212318954862807652, guid: 0b85e451ec2b1514d83fd3038d6546f0, type: 3}
+      propertyPath: musicAudio
+      value: 
+      objectReference: {fileID: 1575365618}
     - target: {fileID: 1212318954862807652, guid: 0b85e451ec2b1514d83fd3038d6546f0, type: 3}
       propertyPath: playerMovement
       value: 

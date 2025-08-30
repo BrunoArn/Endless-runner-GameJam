@@ -19,6 +19,7 @@ public class CountdownUI : MonoBehaviour
     [Header("Audios")]
     [SerializeField] AudioClip firstAudio;
     [SerializeField] AudioClip secondAudio;
+    [SerializeField] AudioSource musicAudio;
 
     private AudioSource audioSource;
 
@@ -61,7 +62,7 @@ public class CountdownUI : MonoBehaviour
         }
 
         playerMovement.enabled = true;
-
+        musicAudio.Play();
         countdownText.gameObject.SetActive(false);
     }
 
