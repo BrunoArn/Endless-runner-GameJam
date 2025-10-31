@@ -32,4 +32,7 @@ Eat biscuits to grow your score (and maybe your ego), but be careful: the farthe
   - Engine: Unity
   - Language: C#
   - WebGL
+ 
+📦 Play
+  - https://brunoarnaud.itch.io/hungry-worm
 
